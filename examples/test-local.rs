@@ -53,7 +53,7 @@ fn main() -> anyhow::Result<()> {
     // Claim namespace
     abstract_deployment
         .version_control
-        .claim_namespace(account.id()?, "my-namespace".to_owned())?;
+        .claim_namespace(account.id()?, "akaia".to_owned())?;
 
     // Deploy
     app.deploy(version)?;

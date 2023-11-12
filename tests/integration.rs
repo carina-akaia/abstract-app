@@ -37,7 +37,7 @@ fn setup() -> anyhow::Result<(AbstractAccount<Mock>, Abstract<Mock>, AppInterfac
     // claim the namespace so app can be deployed
     abstr_deployment
         .version_control
-        .claim_namespace(AccountId::local(1), "my-namespace".to_string())?;
+        .claim_namespace(AccountId::local(1), "akaia".to_string())?;
 
     app.deploy(APP_VERSION.parse()?)?;
 

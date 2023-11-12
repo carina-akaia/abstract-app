@@ -1,15 +1,15 @@
 use cosmwasm_schema::QueryResponses;
 
-use crate::contract::App;
+use crate::contract::DemoApp;
 
 // This is used for type safety and re-exporting the contract endpoint structs.
-abstract_app::app_msg_types!(App, AppExecuteMsg, AppQueryMsg);
+abstract_app::app_msg_types!(DemoApp, AppExecuteMsg, AppQueryMsg);
 
-/// App instantiate message
+/// DemoApp instantiate message
 #[cosmwasm_schema::cw_serde]
 pub struct AppInstantiateMsg {}
 
-/// App execute messages
+/// DemoApp execute messages
 #[cosmwasm_schema::cw_serde]
 #[cfg_attr(feature = "interface", derive(cw_orch::ExecuteFns))]
 #[cfg_attr(feature = "interface", impl_into(ExecuteMsg))]
@@ -17,7 +17,7 @@ pub enum AppExecuteMsg {
     UpdateConfig {},
 }
 
-/// App query messages
+/// DemoApp query messages
 #[cosmwasm_schema::cw_serde]
 #[cfg_attr(feature = "interface", derive(cw_orch::QueryFns))]
 #[cfg_attr(feature = "interface", impl_into(QueryMsg))]
